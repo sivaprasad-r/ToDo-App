@@ -1,4 +1,5 @@
 import { Link, Head } from '@inertiajs/react';
+import ApplicationLogo from '@/Components/ApplicationLogo';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -10,13 +11,15 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
     return (
         <>
-            <Head title="ToDo" />
+            <Head title="Welcome" />
             <div className="flex flex-col min-h-screen bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
                 <div className="flex flex-col flex-grow items-center selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl flex-grow">
                         <header className="flex items-center justify-between gap-2 py-10">
                             <div className="flex justify-start text-black text-4xl font-bold">
-                                ToDo
+                                <Link href="/">
+                                    <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
+                                </Link>
                             </div>
                             <nav className="flex space-x-4">
                                 {auth.user ? (
@@ -49,7 +52,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             <div className="flex flex-col items-center justify-center">
                                 <h1 className="text-4xl font-bold text-center mb-4">Welcome to ToDo App</h1>
                                 <p className="text-lg text-center max-w-lg">
-                                Manage your tasks efficiently with ToDo App. Whether you're organizing personal errands or planning long-term projects, our intuitive interface helps you stay on top of your tasks effortlessly.-
+                                Manage your tasks efficiently with ToDo App. Whether you're organizing personal errands or planning long-term projects, our intuitive interface helps you stay on top of your tasks effortlessly.
                                 </p>
                             </div>
                         </main>
