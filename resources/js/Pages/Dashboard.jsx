@@ -58,7 +58,7 @@ export default function Dashboard({ auth, todos }) {
             <Head title="Dashboard" />
             <div className="py-12 max-w-3xl mx-auto sm:px-6 lg:px-8">
                 <form onSubmit={storeTodo}>
-                    <div className="flex gap-3 items-center justify-center">
+                    <div className="flex gap-3 items-center justify-center mb-4">
                         <input
                             type="text"
                             placeholder="Enter todo here"
@@ -76,7 +76,7 @@ export default function Dashboard({ auth, todos }) {
                 {todos.map((todo) => (
                     <div
                         key={todo.id}
-                        className={`flex gap-3 px-3 py-2 bg-white/90 rounded-md border border-gray-300 mt-6 ${todo.is_completed ? 'line-through' : ''}`}
+                        className={`flex gap-3 px-3 py-2 bg-white/90 rounded-md border border-gray-300 mt-2 ${todo.is_completed ? 'line-through' : ''}`}
                     >
                         <input
                             type="checkbox"
